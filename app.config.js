@@ -8,27 +8,28 @@ export default ({ config }) => ({
 
 const getUniqueIdentifier = () => {
   if (IS_DEV) {
-    return "com.yourname.stickersmash.dev";
+    return "com.justinodev.hml";
   }
 
   if (IS_PREVIEW) {
-    return "com.yourname.stickersmash.preview";
-  }
-  if (IS_PROD) {
-    return "com.yourname.stickersmash.prod";
+    return "com.justinodev.hml";
   }
 
-  return "com.yourname.stickersmash";
+  if (IS_PROD) {
+    return "com.justinodev.prod";
+  }
+
+  return "com.justinodev.hml";
 };
 
 const getAppName = () => {
   if (IS_DEV) {
-    return "StickerSmash (Dev)";
+    return "justinodev (Dev)";
   }
   if (IS_PREVIEW) {
-    return "StickerSmash (Preview)";
+    return "justinodev (Preview)";
   }
   if (IS_PROD) {
-    return "StickerSmash (Prod)";
+    return "justinodev (Prod)";
   }
 };
