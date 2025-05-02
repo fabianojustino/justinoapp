@@ -1,5 +1,5 @@
 name: update
-on: pull_request
+on: [push, pull_request]
 
 jobs:
   update:
@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 23.x
+          node-version: ["16.x", "18.x", "23.x"]
           cache: yarn
 
       - name: Setup EAS
